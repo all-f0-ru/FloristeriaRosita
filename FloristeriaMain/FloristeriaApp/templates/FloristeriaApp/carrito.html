@@ -1,0 +1,47 @@
+{% extends "FloristeriaApp/base.html" %}
+
+{% block title %}Carrito de compras | Floristería Rosita{% endblock %}
+
+{% block content %}
+<section class="page-section cart-section">
+  <h1>Tu carrito</h1>
+  <p>Revisa tus productos antes de continuar con el pago.</p>
+  <div class="cart-list">
+    <article class="cart-item">
+      <div class="cart-item-info">
+        <h2>Ramo Primaveral</h2>
+        <p class="cart-item-desc">Un arreglo lleno de color con flores de temporada seleccionadas a mano.</p>
+      </div>
+      <div class="cart-item-meta">
+        <span class="cart-item-price">$20.000 CLP</span>
+        <button type="button" class="cart-item-remove">Quitar</button>
+      </div>
+    </article>
+    <article class="cart-item">
+      <div class="cart-item-info">
+        <h2>Bouquet Rosas Elegance</h2>
+        <p class="cart-item-desc">Rosas premium en tonos rosados para regalar un momento inolvidable.</p>
+      </div>
+      <div class="cart-item-meta">
+        <span class="cart-item-price">$35.000 CLP</span>
+        <button type="button" class="cart-item-remove">Quitar</button>
+      </div>
+    </article>
+  </div>
+  <div class="cart-summary">
+    <div class="cart-summary-row">
+      <span>Subtotal</span>
+      <span>$55.000 CLP</span>
+    </div>
+    <div class="cart-summary-row">
+      <span>Envío</span>
+      <span>$0 CLP</span>
+    </div>
+    <div class="cart-summary-row total">
+      <span>Total</span>
+      <span>$55.000 CLP</span>
+    </div>
+    <button type="button" class="btn-rosa cart-checkout">Proceder al pago</button>
+  </div>
+</section>
+{% endblock %}
