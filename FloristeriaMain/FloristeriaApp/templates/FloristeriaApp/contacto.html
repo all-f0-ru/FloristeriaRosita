@@ -1,0 +1,35 @@
+{% extends "FloristeriaApp/base.html" %}
+
+{% block title %}Contacto | Floristería Rosita{% endblock %}
+
+{% block content %}
+<section class="page-section contact-section">
+  <h1>Hablemos de flores</h1>
+  <p>Completa el formulario y te responderemos para diseñar el arreglo perfecto para tu ocasión.</p>
+  <form action="#" method="post">
+    {% csrf_token %}
+    <label for="nombre">
+      <span>Nombre completo</span>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    </label>
+    <label for="correo">
+      <span>Correo electrónico</span>
+      <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+    </label>
+    <label for="telefono">
+      <span>Teléfono de contacto</span>
+      <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+    </label>
+    <label for="mensaje">
+      <span>Mensaje</span>
+      <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas" required></textarea>
+    </label>
+    <button type="submit" class="btn-rosa">Enviar mensaje</button>
+  </form>
+  <div class="contact-details">
+    <p><span>Teléfono:</span> +56 9 8182 9902</p>
+    <p><span>Correo:</span> hola@floristeriarosita.cl</p>
+    <p><span>Dirección:</span> Antofagasta, Chile</p>
+  </div>
+</section>
+{% endblock %}

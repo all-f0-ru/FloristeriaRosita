@@ -1,0 +1,23 @@
+{% extends "FloristeriaApp/base.html" %}
+
+{% block title %}Iniciar sesión | Floristería Rosita{% endblock %}
+
+{% block content %}
+<section class="page-section auth-section">
+  <h1>Inicia sesión en Rosita</h1>
+  <p>Accede a tu cuenta para gestionar pedidos, reservas y favoritos.</p>
+  <form action="#" method="post">
+    {% csrf_token %}
+    <label for="email">
+      <span>Correo electrónico</span>
+      <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+    </label>
+    <label for="password">
+      <span>Contraseña</span>
+      <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+    </label>
+    <button type="submit" class="btn-rosa">Ingresar</button>
+  </form>
+  <p class="form-help">¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a></p>
+</section>
+{% endblock %}

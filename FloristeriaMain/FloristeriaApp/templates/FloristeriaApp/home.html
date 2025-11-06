@@ -1,49 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Floristería Rosita 💐</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0bdb5c8.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="{% static 'FloristeriaApp/style.css' %}" />
-</head>
-<body>
-<header class="header menu-fixed">
-  <button class="menu-btn" id="menuBtn">
-    <i class="bi bi-list"></i>
-  </button>
-  <div class="logo">Floristería Rosita</div>
-  <nav class="nav" id="navMenu">
-    <button class="close-menu" id="closeMenu">
-      <i class="bi bi-x-lg"></i>
-    </button>
-    <a href="/">Inicio</a>
-    <a href="/catalogo/">Catálogo</a>
-    <a href="/reserva/">Reservas</a>
-    <a href="/contacto/">Contacto</a>
-  </nav>
-  <div class="header-icons">
-    <a href="/perfil/" class="icon-btn"><i class="bi bi-person-fill"></i></a>
-    <button class="icon-btn" type="button"><i class="bi bi-search-heart"></i></button>
-    <a href="/carrito/" class="icon-btn cart-btn">
-      <i class="bi bi-bag-heart-fill"></i>
-      <span class="cart-count">0</span>
-    </a>
-  </div>
-</header>
-<div id="menuOverlay" class="menu-overlay"></div>
+{% extends "FloristeriaApp/base.html" %}
 
+{% block title %}Inicio | Floristería Rosita 💐{% endblock %}
+
+{% block content %}
 <section class="hero-rosita">
   <div class="hero-content">
     <h1>Floristería Rosita</h1>
     <p class="hero-sub">Flores Frescas y Arreglos Únicos para Cada Ocasión</p>
     <div class="hero-buttons">
       <a href="/catalogo/" class="btn-rosa">Ver Catálogo</a>
-      <a href="/contacto/" class="btn-outline">Contáctanos</a>
+      <a href="{% url 'contacto' %}" class="btn-outline">Contáctanos</a>
     </div>
   </div>
 </section>
@@ -194,9 +160,9 @@
     </div>
     <div class="footer-col">
       <h4>NOSOTRAS</h4>
-      <a href="/">Inicio</a>
+      <a href="{% url 'home' %}">Inicio</a>
       <a href="/catalogo/">Catálogo</a>
-      <a href="/contacto/">Contacto</a>
+      <a href="{% url 'contacto' %}">Contacto</a>
       <a href="/reserva/">Reservas</a>
     </div>
     <div class="footer-col">
@@ -211,28 +177,4 @@
     © 2025 Floristería Rosita — Amor en cada flor
   </div>
 </footer>
-
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const navMenu = document.getElementById('navMenu');
-  const closeMenu = document.getElementById('closeMenu');
-  const menuOverlay = document.getElementById('menuOverlay');
-
-  const openMenu = () => {
-    navMenu.classList.add('open');
-    menuOverlay.classList.add('visible');
-    document.body.classList.add('no-scroll');
-  };
-
-  const closeMenuHandler = () => {
-    navMenu.classList.remove('open');
-    menuOverlay.classList.remove('visible');
-    document.body.classList.remove('no-scroll');
-  };
-
-  menuBtn.addEventListener('click', openMenu);
-  closeMenu.addEventListener('click', closeMenuHandler);
-  menuOverlay.addEventListener('click', closeMenuHandler);
-</script>
-</body>
-</html>
+{% endblock %}

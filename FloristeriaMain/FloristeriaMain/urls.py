@@ -21,5 +21,8 @@ from FloristeriaApp import views
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("login/", views.login_view, name="login"),
+    path("carrito/", views.carrito, name="carrito"),
+    path("contacto/", views.contacto, name="contacto"),
     path("admin/", admin.site.urls),
 ]
