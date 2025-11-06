@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floristería Rosita 💐</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0bdb5c8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'FloristeriaApp/style.css' %}" />
+</head>
+<body>
+<header class="header menu-fixed">
+  <button class="menu-btn" id="menuBtn">
+    <i class="bi bi-list"></i>
+  </button>
+  <div class="logo">Floristería Rosita</div>
+  <nav class="nav" id="navMenu">
+    <button class="close-menu" id="closeMenu">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <a href="/">Inicio</a>
+    <a href="/catalogo/">Catálogo</a>
+    <a href="/reserva/">Reservas</a>
+    <a href="/contacto/">Contacto</a>
+  </nav>
+  <div class="header-icons">
+    <a href="/perfil/" class="icon-btn"><i class="bi bi-person-fill"></i></a>
+    <button class="icon-btn" type="button"><i class="bi bi-search-heart"></i></button>
+    <a href="/carrito/" class="icon-btn cart-btn">
+      <i class="bi bi-bag-heart-fill"></i>
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</header>
+<div id="menuOverlay" class="menu-overlay"></div>
+
+<section class="hero-rosita">
+  <div class="hero-content">
+    <h1>Floristería Rosita</h1>
+    <p class="hero-sub">Flores Frescas y Arreglos Únicos para Cada Ocasión</p>
+    <div class="hero-buttons">
+      <a href="/catalogo/" class="btn-rosa">Ver Catálogo</a>
+      <a href="/contacto/" class="btn-outline">Contáctanos</a>
+    </div>
+  </div>
+</section>
+
+<section class="bienvenida">
+  <h2>Bienvenida a Rosita: Elegancia y Pasión en Cada Flor</h2>
+  <p>
+    En Floristería Rosita, cada flor cuenta una historia única.
+    Creamos experiencias florales personalizadas para bodas, eventos
+    corporativos y celebraciones íntimas, capturando emociones y
+    transformando momentos en recuerdos inolvidables.
+  </p>
+</section>
+
+<section class="why-rosita">
+  <h2>¿Por qué elegir Floristería Rosita?</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <i class="fa-solid fa-heart"></i>
+      <h3>Diseños con amor</h3>
+      <p>Cada arreglo es diseñado con dedicación, cuidando cada detalle para transmitir emociones únicas.</p>
+    </div>
+    <div class="why-item">
+      <i class="fa-solid fa-leaf"></i>
+      <h3>Flores frescas</h3>
+      <p>Seleccionamos flores frescas y de calidad premium para asegurar belleza y duración.</p>
+    </div>
+    <div class="why-item">
+      <i class="fa-solid fa-hand-holding-heart"></i>
+      <h3>Atención personalizada</h3>
+      <p>Nos enfocamos en tu experiencia: asesoría, entrega puntual y servicio cercano.</p>
+    </div>
+  </div>
+</section>
+
+<section class="categorias-rosita">
+  <h2>Nuestras Colecciones</h2>
+  <p class="cat-sub">Diseños florales curados para cada ocasión especial</p>
+  <div class="cat-grid">
+    <div class="cat-card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Ramos Especiales">
+      <h3>Ramos Especiales</h3>
+      <a href="#catalogo" class="btn-rosa-sm">Ver más</a>
+    </div>
+    <div class="cat-card">
+      <img src="https://images.unsplash.com/photo-1523395243481-161029e1cb97?auto=format&fit=crop&w=800&q=80" alt="Bouquets Premium">
+      <h3>Bouquets Premium</h3>
+      <a href="#catalogo" class="btn-rosa-sm">Ver más</a>
+    </div>
+    <div class="cat-card">
+      <img src="https://images.unsplash.com/photo-1495435229349-e86db7bfa013?auto=format&fit=crop&w=800&q=80" alt="Flores para regalar">
+      <h3>Flores para Regalar</h3>
+      <a href="#catalogo" class="btn-rosa-sm">Ver más</a>
+    </div>
+  </div>
+</section>
+
+<section class="pasos-rosita">
+  <h2>¿Cómo funciona?</h2>
+  <p class="pasos-sub">Haz tu pedido en simples pasos</p>
+  <div class="pasos-grid">
+    <div class="paso-card">
+      <div class="numero-paso">01</div>
+      <h3>Elige tu diseño</h3>
+      <p>Explora nuestras colecciones florales cuidadosamente creadas para cada ocasión.</p>
+    </div>
+    <div class="paso-card">
+      <div class="numero-paso">02</div>
+      <h3>Personaliza tu pedido</h3>
+      <p>Indícanos tus preferencias: colores, tamaño, mensaje especial y más.</p>
+    </div>
+    <div class="paso-card">
+      <div class="numero-paso">03</div>
+      <h3>Entrega o retiro</h3>
+      <p>Coordinamos tu envío o puedes retirar directamente en nuestra tienda.</p>
+    </div>
+    <div class="paso-card">
+      <div class="numero-paso">04</div>
+      <h3>Disfruta la magia</h3>
+      <p>Recibe un arreglo fresco y diseñado con amor para hacer tu momento inolvidable.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonios-rosita">
+  <h2>Lo que dicen nuestras clientas</h2>
+  <p class="testi-sub">Experiencias llenas de emoción y flores</p>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente feliz">
+      <h3>Camila R.</h3>
+      <p class="testi-text">“El ramo que encargué superó mis expectativas. Frescura, delicadeza y un aroma increíble. ¡Volveré sin duda!”</p>
+    </div>
+    <div class="testi-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente feliz">
+      <h3>Josefa M.</h3>
+      <p class="testi-text">“Servicio impecable y entrega puntual. Rosita es perfecta para detalles especiales con un toque elegante.”</p>
+    </div>
+    <div class="testi-card">
+      <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Cliente feliz">
+      <h3>Valentina L.</h3>
+      <p class="testi-text">“Encargamos flores para nuestro aniversario y quedamos encantados. ¡Hermosas y duraron muchísimo!”</p>
+    </div>
+  </div>
+</section>
+
+<section id="catalogo" class="catalogo-home">
+  <h2>Nuestros Favoritos</h2>
+  <div class="catalogo">
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=800&q=80" alt="Ramo Primavera">
+      <h3>Ramo Primaveral</h3>
+      <p>$20.000 CLP</p>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=800&q=80" alt="Ramo Tulipanes">
+      <h3>Ramo Tulipanes</h3>
+      <p>$25.000 CLP</p>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Bouquet Rosas Elegance">
+      <h3>Bouquet Rosas Elegance</h3>
+      <p>$35.000 CLP</p>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1471189641895-16c58a695bcb?auto=format&fit=crop&w=800&q=80" alt="Girasol Solitario">
+      <h3>Girasol Solitario</h3>
+      <p>$6.000 CLP</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-rosita">
+  <div class="footer-container">
+    <div class="footer-col">
+      <div class="footer-logo-text">Floristería Rosita</div>
+    </div>
+    <div class="footer-col">
+      <h4>RO S I T A</h4>
+      <p>
+        Somos una floristería antofagastina y amamos los detalles!<br>
+        Nuestros arreglos florales están llenos de dedicación, amor y elegancia.
+      </p>
+      <p class="footer-contact">
+        📞 +56 9 8182 9902<br>
+        📍 Antofagasta, Chile
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>NOSOTRAS</h4>
+      <a href="/">Inicio</a>
+      <a href="/catalogo/">Catálogo</a>
+      <a href="/contacto/">Contacto</a>
+      <a href="/reserva/">Reservas</a>
+    </div>
+    <div class="footer-col">
+      <h4>INFORMACIÓN</h4>
+      <a href="#">Políticas de Privacidad</a>
+      <a href="#">Política de Reembolso</a>
+      <a href="#">Políticas de Despacho</a>
+      <a href="#">Términos y Condiciones</a>
+    </div>
+  </div>
+  <div class="footer-creditos">
+    © 2025 Floristería Rosita — Amor en cada flor
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navMenu = document.getElementById('navMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
+
+  const openMenu = () => {
+    navMenu.classList.add('open');
+    menuOverlay.classList.add('visible');
+    document.body.classList.add('no-scroll');
+  };
+
+  const closeMenuHandler = () => {
+    navMenu.classList.remove('open');
+    menuOverlay.classList.remove('visible');
+    document.body.classList.remove('no-scroll');
+  };
+
+  menuBtn.addEventListener('click', openMenu);
+  closeMenu.addEventListener('click', closeMenuHandler);
+  menuOverlay.addEventListener('click', closeMenuHandler);
+</script>
+</body>
+</html>
